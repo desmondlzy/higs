@@ -1,5 +1,7 @@
 # Multiview Datagen
 
+The code is built on top of the data generation pipeline of [NeRF-tex](https://github.com/hbaatz/nerf-tex).
+
 ## Requirements
 
 - Blender 4.0+
