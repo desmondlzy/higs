@@ -1,0 +1,12 @@
+# Two gsplat checkouts are required — they are different versions serving different roles:
+#   - deps/gsplat  (fork, gsplat 1.4.0): C++/CUDA *source* the custom kernels in
+#     heatgaussian/cpp compile against. Carries an include-guard fix needed to build, and
+#     matches the 1.4.0 header layout those kernels are written for.
+#   - extern/gsplat (gsplat 1.5.1): source for the Python `gsplat` package (install.sh
+#     installs from here, not PyPI, because the PyPI wheel ships no CUDA sources).
+[submodule "deps/gsplat"]
+	path = heatgaussian/cpp/deps/gsplat
+	url = https://github.com/desmondlzy/gsplat-higs.git
+[submodule "extern/gsplat"]
+	path = extern/gsplat
+	url = https://github.com/nerfstudio-project/gsplat.git

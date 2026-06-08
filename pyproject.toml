@@ -1,0 +1,33 @@
+[project]
+name = "heatgaussian"
+version = "0.0.2"
+authors = [
+	{name = "Desmond Liu", email = "desmondzyliu@gmail.com"},
+]
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "nerfstudio>=1.1.5", 
+    "imageio==2.36",        # 2.37 has issues reading .exr files
+    "imageio-ffmpeg",
+    "tyro",
+    "torchmetrics",
+    "pytorch-msssim",
+    "opencv-python-headless",
+    "huggingface_hub",
+]
+
+[tool.setuptools.packages.find]
+include=["heatgaussian*"]
+
+[tool.setuptools.package-data]
+heatgaussian = ["**/*.cpp", "**/*.cu"]
+
+[project.entry-points.'nerfstudio.dataparser_configs']
+higs-heat = 'heatgaussian.nsext.dataparser_configs:HigsHeatDataparser'
+
+
+[project.entry-points.'nerfstudio.method_configs']
+heat-2dgs = 'heatgaussian.nsext.method_configs:heat2dgs_config'
