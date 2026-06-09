@@ -1,6 +1,6 @@
-# HiGS
+# [SIGGRAPH Asia 25'] HiGS: Inverse Radiative Transport for Infrared Scenes with Gaussian Primitives
 
-Code release for _HiGS: Inverse Radiative Transport for Infrared Scenes with Gaussian Primitives_ (SIGGRAPH 2025).
+Code release for _HiGS: Inverse Radiative Transport for Infrared Scenes with Gaussian Primitives_, SIGGRAPH Asia 2025; Liu Zhenyuan, Bharath Seshadri, George Kopanas, Bernd Bickel.
 See our [project page](https://desmondlzy.me/publications/higs/) for more information.
 
 ## Installation
@@ -21,7 +21,7 @@ matching PyTorch wheel index (e.g. `cu121`).
 **Clone with submodules**
 
 ```bash
-git clone --recursive <repo-url>
+git clone --recursive https://github.com/desmondlzy/higs
 cd higs
 ```
 
@@ -34,7 +34,7 @@ bash install.sh
 conda activate higs
 ```
 
-Then, you can verify the install by running the following commands and check for errors 
+Then, you can verify the install by running the following commands and check for errors: 
 
 ```bash
 ns-train heat-2dgs -h | grep higs-heat
